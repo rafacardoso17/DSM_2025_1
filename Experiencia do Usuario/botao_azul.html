@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste A/B - Versão Azul</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        .button {
+            background-color: #007bff; /* Cor azul */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .instructions {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Participe do Nosso Evento Exclusivo!</h1>
+        <p>Descubra as últimas tendências e inovações do mercado.</p>
+        <div class="button-container">
+            <button id="blueButton" class="button">Inscreva-se Já!</button>
+        </div>
+        <p class="instructions">Clique no botão acima para garantir sua vaga.</p>
+    </div>
+    <script>
+        let startTime = Date.now();
+        const blueButton = document.getElementById('blueButton');
+
+        blueButton.addEventListener('click', function() {
+            let endTime = Date.now();
+            let timeTaken = (endTime - startTime) / 1000; // Tempo em segundos
+            alert(`Você clicou no botão da Versão Azul em ${timeTaken.toFixed(2)} segundos!`);
+            // Aqui você pode adicionar o código para registrar o clique e o tempo
+            console.log(`Versão Azul - Tempo gasto: ${timeTaken.toFixed(2)} segundos`);
+        });
+    </script>
+</body>
+</html>
